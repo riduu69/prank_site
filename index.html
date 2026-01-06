@@ -1,25 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Number to Information</title>
+  <meta charset="UTF-8">
+  <title>NUMBER TO FULL INFO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background: #0f0f0f;
+      padding: 35px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 420px;
+      text-align: center;
+      border: 2px solid red;
+    }
+
+    h1 {
+      color: red;
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: #fca5a5;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
-<body style="text-align:center; margin-top:100px; font-family:Arial;">
 
-  <h1>📞 Number to Information</h1>
-  <p>Enter a number to check details</p>
+<body>
 
-  <input type="text" placeholder="Enter number">
-  <br><br>
+  <div class="box">
+    <h1>NUMBER TO FULL INFO</h1>
+    <p>Enter any number to get full personal details</p>
 
-  <button onclick="playSound()">Check</button>
+    <input type="text" placeholder="Enter number">
+    <button onclick="prank()">CHECK NOW</button>
 
-  <audio id="sound">
-    <source src="prank.mp3" type="audio/mpeg">
-  </audio>
+    <audio id="sound">
+      <source src="prank.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
   <script>
-    function playSound() {
+    function prank() {
+      // play sound
       document.getElementById("sound").play();
+
+      // phone vibration (mobile)
+      if (navigator.vibrate) {
+        navigator.vibrate([300, 150, 300, 150, 500]);
+      }
     }
   </script>
 
