@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number to Information</title>
+</head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+  <h1>📞 Number to Information</h1>
+  <p>Enter a number to check details</p>
+
+  <input type="text" placeholder="Enter number">
+  <br><br>
+
+  <button onclick="playSound()">Check</button>
+
+  <audio id="sound">
+    <source src="prank.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function playSound() {
+      document.getElementById("sound").play();
+    }
+  </script>
+
+</body>
+</html>
